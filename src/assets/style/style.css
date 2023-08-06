@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+.block {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 768px) {
+  .block {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .block {
+    margin-bottom: 30px;
+  }
+}
+
+.coloredBG {
+  background: rgba(255, 152, 0, 0.6);
+  background: linear-gradient(145deg, rgba(255, 152, 0, 0.3) 45%, rgba(255, 152, 0, 0.7) 100%);
+}
+
+.title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  color: #333333;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 768px) {
+  .title {
+    margin-bottom: 15px;
+  }
+}
+
+.subTitle {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .subTitle {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .subTitle {
+    font-size: 20px;
+  }
+}
+
+.handwritingTitle {
+  font-family: "Dancing Script", sans-serif;
+  font-weight: 400;
+  font-size: 72px;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .handwritingTitle {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .handwritingTitle {
+    font-size: 40px;
+  }
+}
+
+.text {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #333333;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 768px) {
+  .text {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .text {
+    font-size: 15px;
+  }
+}
+
+.coloredText {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  color: rgb(255, 152, 0);
+  margin-left: 10px;
+  margin-bottom: 20px;
+  z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .coloredText {
+    margin-bottom: 12px;
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .coloredText {
+    font-size: 20px;
+  }
+}
+
+.coloredText2 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: rgb(255, 152, 0);
+}
+@media screen and (max-width: 768px) {
+  .coloredText2 {
+    font-size: 14px;
+  }
+}
+
+.opacityText {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #333333;
+  opacity: 0.6;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 768px) {
+  .opacityText {
+    margin-bottom: 10px;
+  }
+}
+
+.button {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #FFFFFF;
+  padding: 10px 24px;
+  background: rgb(255, 152, 0);
+  border-radius: 50px;
+  width: fit-content;
+  transition-duration: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+.button:not(.hoverDisabled):hover {
+  padding: 10px 35px;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+@media screen and (max-width: 768px) {
+  .grid2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+@media screen and (max-width: 1200px) {
+  .grid4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .grid4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 450px) {
+  .grid4 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.full {
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+*:hover {
+  transition-duration: 0.3s;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+input, select, option, textarea {
+  display: block;
+  padding: 16px 24px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  outline: unset;
+  outline-offset: unset;
+}
+input[type=date], select[type=date], option[type=date], textarea[type=date] {
+  padding: 15px 24px;
+}
+input[type=date]:focus, select[type=date]:focus, option[type=date]:focus, textarea[type=date]:focus {
+  padding: 15px 24px;
+}
+
+option {
+  cursor: pointer;
+}
+
+option:hover {
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}
+
+/*# sourceMappingURL=style.css.map */

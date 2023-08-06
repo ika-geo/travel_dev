@@ -1,0 +1,178 @@
+@import "../../../../src/assets/style/variables";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 5px 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+
+  .burgerMenu {
+    display: none;
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+    @media screen and (max-width: 900px) {
+      display: block;
+
+
+      .burgerStick {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 2px;
+        background-color: $mainColor;
+        &:after, &:before{
+          position: absolute;
+          content: "";
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: inherit;
+          transition-duration: .3s;
+        }
+        &:before {
+          top: -8px;
+        }
+        &:after {
+          top: 8px;
+        }
+        &.active{
+          height: 0;
+            &:before{
+              transition-duration: .3s;
+              top: 0;
+              transform: rotate(45deg);
+            }
+            &:after{
+              transition-duration: .3s;
+              top: 0;
+              transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+
+
+
+  .header__block {
+    flex-wrap: wrap;
+    align-items: center;
+    .logo {
+      flex-grow: 1;
+      a{
+        width: fit-content;
+        @media screen and (max-width: 900px){
+          flex-grow: unset;
+        }
+        h2{
+          transition-duration: .3s;
+        }
+        &:hover{
+          h2{
+            color: white;
+          }
+        }
+      }
+    }
+
+    .header__right {
+      flex-grow: 1;
+      justify-content: space-around;
+      @media screen and (max-width: 900px) {
+        width: 100vw;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        padding: 0;
+        display: flex;
+        position: fixed;
+        background-color: black;
+        flex-direction: column;
+        justify-content: start;
+        align-items: end;
+        overflow: hidden;
+        transition-duration: .3s;
+        &.active {
+          padding: 90px 50px 20px 20px;
+          right: 0;
+          transition-duration: .3s;
+        }
+      }
+
+
+
+      nav {
+        @media screen and (max-width: 900px) {
+          order: 2;
+          margin-top: 40px;
+          ul {
+            flex-direction: column;
+            align-items: end;
+          }
+        }
+
+        a {
+          position: relative;
+          font-family: $fontFamily;
+          font-weight: 600;
+          font-size: 20px;
+          color: #FFFFFF;
+          margin: 0 0 15px 25px;
+          white-space: nowrap;
+
+          &:after {
+            bottom: -10px;
+            left: 0;
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: $mainColor;
+            transition-duration: .3s;
+            transform: scaleX(0);
+          }
+
+          &:hover:after {
+            transition-duration: .3s;
+            transform: scaleX(1);
+          }
+        }
+      }
+
+
+      .loginBlock {
+        .login {
+          font-family: $fontFamily;
+          font-weight: 600;
+          font-size: 20px;
+          color: #FFFFFF;
+          background-color: unset;
+          border: none;
+          outline: none;
+          margin-left: 15px;
+          &:hover{
+            color: $mainColor;
+          }
+        }
+
+        .signUp {
+          margin-left: 15px;
+          &:hover{
+            opacity: 0.6;
+          }
+        }
+      }
+
+    }
+
+
+  }
+
+}

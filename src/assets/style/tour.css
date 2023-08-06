@@ -1,0 +1,177 @@
+.tour {
+  padding-top: 130px;
+}
+@media screen and (max-width: 900px) {
+  .tour {
+    padding-top: 70px;
+  }
+}
+.tour .gallery .galleryBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tour .gallery .galleryBlock .img {
+  height: 500px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1000px) {
+  .tour .gallery .galleryBlock .img {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .tour .gallery .galleryBlock .img {
+    height: 200px;
+  }
+}
+.tour .gallery .galleryBlock .img img {
+  cursor: pointer;
+}
+.tour .gallery .galleryBlock .galleryItems {
+  gap: 5px;
+}
+@media screen and (max-width: 768px) {
+  .tour .gallery .galleryBlock .galleryItems {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (max-width: 450px) {
+  .tour .gallery .galleryBlock .galleryItems {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.tour .gallery .galleryBlock .galleryItems .galleryItems__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 152, 0, 0.2);
+  aspect-ratio: 1/1;
+  margin-bottom: 20px;
+}
+.tour .gallery .galleryBlock .galleryItems .galleryItems__item img {
+  cursor: pointer;
+}
+.tour .gallery .galleryFixed {
+  background-color: black;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.tour .gallery .galleryFixed .galleryFixed__imgBlock {
+  position: relative;
+  height: 70%;
+  max-width: 60%;
+  margin: 0 auto;
+  width: fit-content;
+}
+@media screen and (max-width: 768px) {
+  .tour .gallery .galleryFixed .galleryFixed__imgBlock {
+    max-width: unset;
+  }
+}
+.tour .gallery .galleryFixed .galleryFixed__imgBlock .close {
+  position: absolute;
+  top: -40px;
+  right: -5px;
+  margin-left: auto;
+  margin-bottom: 10px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition-duration: 0.3s;
+}
+.tour .gallery .galleryFixed .galleryFixed__imgBlock .close:active {
+  user-select: none;
+}
+.tour .gallery .galleryFixed .galleryFixed__imgBlock .close:hover {
+  opacity: 1;
+}
+.tour .gallery .galleryFixed .galleryFixed__imgBlock .close:before, .tour .gallery .galleryFixed .galleryFixed__imgBlock .close:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(255, 152, 0);
+}
+.tour .gallery .galleryFixed .galleryFixed__imgBlock .close:before {
+  transform: rotate(-45deg);
+}
+.tour .gallery .galleryFixed .galleryFixed__imgBlock .close:after {
+  transform: rotate(45deg);
+}
+.tour .gallery .galleryFixed .galleryFixed__imgBlock img {
+  margin: 0 auto;
+}
+.tour .gallery .galleryFixed .navigation .prev, .tour .gallery .galleryFixed .navigation .next {
+  position: fixed;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  cursor: pointer;
+  border-width: 25px 43.3px 25px 0;
+  border-color: transparent rgba(255, 152, 0, 0.7) transparent transparent;
+}
+.tour .gallery .galleryFixed .navigation .prev:not(.disabled):hover, .tour .gallery .galleryFixed .navigation .next:not(.disabled):hover {
+  border-color: transparent #ff9800 transparent transparent;
+}
+.tour .gallery .galleryFixed .navigation .prev.disabled, .tour .gallery .galleryFixed .navigation .next.disabled {
+  border-color: transparent gray transparent transparent;
+  cursor: unset;
+}
+@media screen and (max-width: 768px) {
+  .tour .gallery .galleryFixed .navigation .prev, .tour .gallery .galleryFixed .navigation .next {
+    top: unset;
+    bottom: 10%;
+  }
+}
+.tour .gallery .galleryFixed .navigation .prev:active, .tour .gallery .galleryFixed .navigation .next:active {
+  user-select: none;
+}
+.tour .gallery .galleryFixed .navigation .prev {
+  left: 20px;
+}
+.tour .gallery .galleryFixed .navigation .next {
+  right: 20px;
+  rotate: 180deg;
+}
+.tour .tour__infoBlock .infoBlock {
+  display: flex;
+  flex-direction: column;
+}
+.tour .tour__infoBlock .infoBlock p {
+  margin-bottom: 20px;
+}
+.tour .tour__infoBlock .infoBlock .imgBlock {
+  height: 400px;
+}
+.tour .tour__infoBlock .infoBlock .price.subtitle {
+  margin-left: 15px;
+}
+.tour .tour__infoBlock .infoBlock .persons.subtitle {
+  margin-left: 15px;
+}
+.tour .tour__infoBlock .infoBlock button {
+  margin-bottom: 20px;
+}
+.tour .tour__infoBlock .infoBlock .map {
+  flex: 1;
+  margin-bottom: 20px;
+}
+.tour .tour__infoBlock .infoBlock .map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+}
+
+/*# sourceMappingURL=tour.css.map */

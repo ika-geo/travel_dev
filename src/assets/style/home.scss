@@ -1,0 +1,225 @@
+@import "variables";
+
+.home {
+
+
+  .headerBottom {
+    background: url("../img/home/hedaerBottom.png") center center no-repeat;
+    background-size: cover;
+    padding: 230px 0 330px;
+    @media screen and (max-width: 768px) {
+      padding: 150px 0;
+    }
+    @media screen and (max-width: 450px) {
+      padding: 50px 0;
+    }
+
+    .headerBottom__text {
+      text-align: center;
+      color: white;
+      margin-bottom: 60px;
+
+      .text {
+        font-weight: 700;
+        font-size: 24px;
+        @media screen and (max-width: 768px) {
+          font-size: 20px;
+        }
+        @media screen and (max-width: 450px) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    form {
+      flex-wrap: wrap;
+      padding: 12px;
+      background: #FFFFFF;
+      border-radius: 12px;
+      width: 98%;
+      margin: 0 1%;
+      box-shadow: 0 0 0 20px rgb(255 255 255 / 20%);
+      @media screen and (max-width: 500px) {
+        flex-direction: column;
+        align-items: start;
+      }
+
+
+      .inputBlock {
+        @media screen and (max-width: 768px) {
+          margin-bottom: 20px;
+          width: 100%;
+          &:not(:last-child){
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          }
+          input[type="date"]::-webkit-calendar-picker-indicator{
+            left: 0;
+          }
+        }
+
+
+        label {
+          svg {
+            margin-right: 5px;
+            width: 30px;
+            height: 20px;
+            display: block;
+          }
+
+          .text {
+            margin-bottom: unset;
+          }
+        }
+
+      }
+
+        .button {
+          transition-duration: .3s;
+          &:hover {
+            background-color: rgba($mainColor, 0.7);
+          }
+        }
+    }
+  }
+
+    .bestCompany {
+      .bestCompany_rates {
+
+        @media screen and (max-width: 450px) {
+          display: block;
+        }
+
+        .bestCompany_rateItem {
+          max-width: 100px;
+          @media screen and (max-width: 450px) {
+            display: flex;
+            max-width: unset;
+            align-items: center;
+          }
+
+          .rateItem__title {
+            margin-right: 10px;
+          }
+
+        }
+      }
+    }
+
+    .getOffer {
+      .getOffer__block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (max-width: 768px) {
+          justify-content: center;
+        }
+
+        .getOffer__textBlock {
+          padding: 30px;
+          background: rgba(255, 255, 255, 0.3);
+          border-radius: 24px;
+          text-align: center;
+          max-width: 480px;
+          margin: 40px 0;
+        }
+
+        img {
+          margin-top: -150px;
+          @media screen and (max-width: 768px) {
+            display: none;
+          }
+        }
+      }
+    }
+
+
+    .popular {
+      .popular__title {
+        margin-bottom: 40px;
+      }
+
+      .popular__items {
+        gap: 20px;
+        flex-wrap: wrap;
+        @media screen and (max-width: 900px){
+          justify-content: center;
+        }
+
+        .popular__item{
+          width: 280px;
+          @media screen and (max-width: 600px){
+            width: unset;
+          }
+          img {
+            border-radius: 10px;
+            margin-bottom: 15px;
+          }
+
+          .popular__itemBlock {
+            padding: 15px;
+            min-width: 280px;
+
+            .popular__itemTitle {
+              margin-bottom: 15px;
+              height: 2.5rem;
+            }
+
+            .coloredText {
+              font-size: 30px;
+              position: relative;
+
+              &::before {
+                color: $textColor;
+                opacity: $opacity;
+                position: absolute;
+                content: "$";
+                top: 0;
+                left: -12px;
+                font-size: 60%;
+                font-weight: 400;
+              }
+
+              &::after {
+                color: $textColor;
+                opacity: $opacity;
+                content: "/day";
+                font-size: 60%;
+                margin-left: 10px;
+                font-weight: 400;
+              }
+
+            }
+
+            .conditionItem {
+              margin-bottom: 10px;
+              align-items: baseline;
+
+              svg {
+                width: 20px;
+                margin-right: 15px;
+              }
+
+              .text {
+                margin-bottom: 5px;
+              }
+            }
+
+            button {
+              border: 1px solid $mainColor;
+              background-color: unset;
+              color: $mainColor;
+              transition-duration: .3s;
+
+              &:hover {
+                border: 1px solid unset;
+                background-color: $mainColor;
+                color: white;
+              }
+            }
+          }
+        }
+        }
+
+    }
+
+  }

@@ -1,0 +1,45 @@
+.homeTours__item {
+  display: flex;
+  flex-direction: column;
+}
+.homeTours__item img {
+  margin-bottom: 20px;
+  height: 200px;
+}
+@media screen and (max-width: 450px) {
+  .homeTours__item img {
+    height: unset;
+  }
+}
+.homeTours__item .subTitle {
+  height: 3rem;
+  transition-duration: 0.3s;
+}
+@media screen and (max-width: 450px) {
+  .homeTours__item .subTitle {
+    height: unset;
+  }
+}
+.homeTours__item .subTitle:hover {
+  color: rgb(255, 152, 0);
+}
+.homeTours__item .tourPrice {
+  margin-bottom: 10px;
+}
+.homeTours__item .date__persons {
+  margin-bottom: 15px;
+}
+.homeTours__item svg {
+  fill: none;
+  stroke: rgb(255, 152, 0);
+  margin-right: 10px;
+}
+.homeTours__item .text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*# sourceMappingURL=tourItem.css.map */

@@ -1,0 +1,49 @@
+@import "../../assets/style/variables";
+
+.homeTours__item{
+
+  display: flex;
+  flex-direction: column;
+
+  img {
+    margin-bottom: 20px;
+    height: 200px;
+    @media screen and (max-width: 450px){
+      height: unset;
+    }
+  }
+
+  .subTitle{
+    height: 3rem;
+    transition-duration: .3s;
+    @media screen and (max-width: 450px){
+      height: unset;
+    }
+    &:hover{
+      color: $mainColor;
+    }
+  }
+
+  .tourPrice{
+    margin-bottom: 10px;
+  }
+
+  .date__persons{
+    margin-bottom: 15px;
+  }
+
+  svg{
+    fill:none;
+    stroke: $mainColor;
+    margin-right: 10px;
+  }
+
+  .text{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+}

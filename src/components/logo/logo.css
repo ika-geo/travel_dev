@@ -1,0 +1,18 @@
+.logo {
+  width: fit-content;
+}
+.logo img {
+  height: 50px;
+}
+@media screen and (max-width: 900px) {
+  .logo img {
+    display: none;
+  }
+}
+.logo .logoText {
+  font-size: 35px;
+  color: rgb(255, 152, 0);
+  font-family: "Dancing Script", sans-serif;
+}
+
+/*# sourceMappingURL=logo.css.map */

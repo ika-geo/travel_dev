@@ -1,0 +1,234 @@
+@import "variables";
+
+.tour {
+  padding-top: 130px;
+  @media screen and (max-width: 900px) {
+    padding-top: 70px;
+  }
+
+
+  .gallery {
+    .galleryBlock {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .img {
+        height: 500px;
+        margin-bottom: 20px;
+        @media screen and (max-width: 1000px) {
+          height: 300px;
+        }
+        @media screen and (max-width: 1000px) {
+          height: 200px;
+        }
+
+
+        img {
+          cursor: pointer;
+        }
+
+      }
+
+      .galleryItems {
+        gap: 5px;
+        @media screen and (max-width: 768px) {
+          grid-template-columns: repeat(4, 1fr);
+        }
+        @media screen and (max-width: 450px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .galleryItems__item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid rgba($mainColor, 0.2);
+          aspect-ratio: 1/1;
+          margin-bottom: 20px;
+
+          img {
+            cursor: pointer;
+          }
+        }
+
+      }
+    }
+
+    .galleryFixed {
+      background-color: black;
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+
+      .galleryFixed__imgBlock {
+        position: relative;
+        height: 70%;
+        max-width: 60%;
+        margin: 0 auto;
+        width: fit-content;
+        @media screen and (max-width: 768px) {
+          max-width: unset;
+        }
+
+
+        .close {
+          position: absolute;
+          top: -40px;
+          right: -5px;
+          margin-left: auto;
+          margin-bottom: 10px;
+          height: 40px;
+          width: 40px;
+          cursor: pointer;
+          opacity: 0.7;
+          transition-duration: 0.3s;
+          &:active{
+            user-select: none;
+          }
+          &:hover {
+            opacity: 1;
+          }
+          &:before, &:after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            right: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $mainColor;
+          }
+          &:before {
+            transform: rotate(-45deg);
+          }
+          &:after {
+            transform: rotate(45deg);
+          }
+        }
+
+
+        img {
+          margin: 0 auto;
+        }
+      }
+
+      .navigation {
+        .prev, .next {
+          position: fixed;
+          top: 50%;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          cursor: pointer;
+          border-width: 25px 43.3px 25px 0;
+          border-color: transparent rgba($mainColor, 0.7) transparent transparent;
+
+          &:not(.disabled):hover {
+            border-color: transparent rgba($mainColor, 1) transparent transparent;
+          }
+
+          &.disabled {
+            border-color: transparent gray transparent transparent;
+            cursor: unset;
+          }
+
+          @media screen and (max-width: 768px) {
+            top: unset;
+            bottom: 10%;
+          }
+
+          &:active {
+            user-select: none;
+          }
+        }
+        .prev{
+          left: 20px;
+        }
+        .next{
+          right: 20px;
+          rotate: 180deg;
+        }
+      }
+
+
+
+        //.prev {
+        //  left: 20px;
+        //  border-width: 25px 43.3px 25px 0;
+        //  border-color: transparent rgba($mainColor, 0.7) transparent transparent;
+        //  &:not(.disabled):hover {
+        //    border-color: transparent rgba($mainColor, 1) transparent transparent;
+        //  }
+        //  &.disabled{
+        //    border-color: transparent gray transparent transparent;
+        //    cursor: unset;
+        //  }
+        //}
+        //
+        //.next {
+        //  right: 20px;
+        //  border-width: 25px 0 25px 43.3px;
+        //  border-color: transparent transparent transparent rgba($mainColor, 0.7);
+        //  &:not(.disabled):hover {
+        //    border-color: transparent transparent transparent rgba($mainColor, 1);
+        //  }
+        //  &.disabled{
+        //    border-color: transparent transparent transparent gray;
+        //    cursor: unset;
+        //  }
+        //}
+
+
+    }
+
+  }
+
+
+  .tour__infoBlock {
+
+
+    .infoBlock{
+      display: flex;
+      flex-direction: column;
+      p {
+        margin-bottom: 20px;
+      }
+
+      .imgBlock {
+        height: 400px;
+      }
+
+      .price.subtitle {
+        margin-left: 15px;
+      }
+
+      .persons.subtitle {
+        margin-left: 15px;
+      }
+
+      button {
+        margin-bottom: 20px;
+      }
+
+      .map {
+        flex: 1;
+        margin-bottom: 20px;
+        iframe {
+          width: 100%;
+          height: 100%;
+          min-height: 300px;
+        }
+      }
+    }
+
+
+  }
+
+
+}

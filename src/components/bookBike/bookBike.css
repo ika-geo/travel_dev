@@ -1,0 +1,24 @@
+.bookBike {
+  padding: 20px 0;
+}
+.bookBike form .inputs {
+  margin-bottom: 25px;
+}
+.bookBike form .inputs label {
+  display: block;
+  margin-bottom: 10px;
+}
+.bookBike form input[type=submit] {
+  width: fit-content;
+  margin: 0 auto;
+}
+.bookBike .bookBike__img {
+  margin-bottom: -70px;
+}
+@media screen and (max-width: 768px) {
+  .bookBike .bookBike__img {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=bookBike.css.map */

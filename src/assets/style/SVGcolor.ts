@@ -1,0 +1,1 @@
+export const SVGColor = `rgb(255, 152, 0)`

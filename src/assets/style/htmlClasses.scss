@@ -1,0 +1,172 @@
+@import "variables";
+
+.block{
+  margin-bottom: 60px;
+  @media screen and (max-width: 768px){
+    margin-bottom: 40px;
+  }
+  @media screen and (max-width: 768px){
+    margin-bottom: 30px;
+  }
+}
+
+.coloredBG{
+  background: rgba($mainColor, 0.6);
+  background: linear-gradient(145deg, rgba($mainColor, 0.3) 45%, rgba($mainColor, 0.7) 100%);
+}
+
+.title{
+  font-family: $fontFamily;
+  font-weight: 800;
+  font-size: 32px;
+  color: $textColor;
+  margin-bottom: 25px;
+  @media screen and (max-width: 768px){
+    margin-bottom: 15px;
+  }
+}
+
+.subTitle{
+  font-family: $fontFamily;
+  font-weight: 700;
+  font-size: 24px;
+  color: $textColor;
+  margin-bottom: 20px;
+  @media screen and (max-width: 768px){
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  @media screen and (max-width: 450px){
+    font-size: 20px;
+  }
+}
+
+.handwritingTitle{
+  font-family: $handWritingFont;
+  font-weight: 400;
+  font-size: 72px;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  @media screen and (max-width: 768px){
+    font-size: 50px;
+  }
+  @media screen and (max-width: 450px){
+    font-size: 40px;
+  }
+}
+
+.text{
+  font-family: $fontFamily;
+  font-weight: 400;
+  font-size: 18px;
+  color: $textColor;
+  margin-bottom: 15px;
+  @media screen and (max-width: 768px){
+    font-size: 16px;
+  }
+  @media screen and (max-width: 450px){
+    font-size: 15px;
+  }
+}
+
+.coloredText{
+  font-family: $fontFamily;
+  font-weight: 800;
+  font-size: 24px;
+  color: $mainColor;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  z-index: -1;
+  @media screen and (max-width: 768px){
+    margin-bottom: 12px;
+    font-size: 22px;
+  }
+  @media screen and (max-width: 450px){
+    font-size: 20px;
+  }
+}
+
+.coloredText2{
+  font-family: $fontFamily;
+  font-weight: 600;
+  font-size: 16px;
+  color: $mainColor;
+  @media screen and (max-width: 768px){
+    font-size: 14px;
+  }
+}
+
+.opacityText{
+  font-family: $fontFamily;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: $textColor;
+  opacity: 0.6;
+  margin-bottom: 15px;
+  @media screen and (max-width: 768px){
+    margin-bottom: 10px;
+  }
+}
+
+.button{
+  font-family: $fontFamily;
+  font-weight: 600;
+  font-size: 20px;
+  color: #FFFFFF;
+  padding: 10px 24px;
+  background: $mainColor;
+  border-radius: 50px;
+  width: fit-content;
+  transition-duration: .3s;
+  border: none;
+  cursor: pointer;
+  &:not(.hoverDisabled):hover{
+    padding: 10px 35px;
+  }
+}
+
+
+.grid2{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  @media screen and (max-width: 768px){
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.grid4{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  @media screen and (max-width: 1200px){
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (max-width: 768px){
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 450px){
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+
+}
+
+.flexBetween{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.full{
+  width: 100%;
+}
+
+

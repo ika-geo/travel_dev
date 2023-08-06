@@ -1,0 +1,17 @@
+@import "../../../src/assets/style/variables";
+
+.logo{
+  width: fit-content;
+  img{
+    height: 50px;
+    @media screen and (max-width: 900px){
+      display: none;
+    }
+  }
+  .logoText{
+    font-size: 35px;
+    color: $mainColor;
+    font-family: $handWritingFont;
+  }
+
+}

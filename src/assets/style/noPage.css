@@ -1,0 +1,25 @@
+.noPage {
+  padding: 200px 0;
+  text-align: center;
+}
+.noPage h1 {
+  letter-spacing: 10px;
+  font-size: 100px;
+}
+.noPage p {
+  font-size: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .noPage {
+    padding: 100px 0;
+  }
+  .noPage h1 {
+    font-size: 60px;
+  }
+  .noPage p {
+    font-size: 40px;
+  }
+}
+
+/*# sourceMappingURL=noPage.css.map */
